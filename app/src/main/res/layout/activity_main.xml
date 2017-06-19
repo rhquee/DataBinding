@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="android.view.View" />
+        <import type="java.lang.Float" />
+
+        <variable
+            name="beer"
+            type="pl.kfrak.databinding.models.Beer"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <Button
+            android:onClick="showLech"
+            android:text="POKASZ LUZNEGO LESZKA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/show_lechBeer" />
+
+        <Button
+            android:onClick="showPiast"
+            android:text="Poka piasta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/show_piastBeer" />
+
+        <Button
+            android:onClick="showRedds"
+            android:text="Zaprezentuj reddsa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/show_reddsBeer" />
+
+        <TextView
+            android:text=""
+            android:layout_height="4dp"
+            android:background="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:id="@+id/textView7" />
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{beer.name}"
+            android:id="@+id/beer_name_text" />
+
+        <TextView
+            android:layout_gravity="center"
+            android:text="@{Float.toString(beer.price)}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/beer_price_text" />
+
+        <TextView
+            android:layout_gravity="center"
+            android:text="@{Float.toString(beer.power)}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/beer_power_text" />
+
+
+    </LinearLayout>
+
+</layout>
